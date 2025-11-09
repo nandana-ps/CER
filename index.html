@@ -2,23 +2,27 @@
 <html>
 <head>
     <title>Simple Currency Converter</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Currency Converter</h2>
-    <input type="number" id="amount" placeholder="Amount">
-    <select id="from">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="INR">INR</option>
-    </select>
-    <select id="to">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="INR">INR</option>
-    </select>
-    <button onclick="convert()">Convert</button>
-    <div id="result"></div>
+    <div class="card" role="region" aria-label="Currency converter">
+        <h2>Currency Converter</h2>
+        <div class="field"><input type="number" id="amount" placeholder="Amount"></div>
+        <div class="field-row">
+            <select id="from" aria-label="From currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+            </select>
+            <select id="to" aria-label="To currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+            </select>
+        </div>
+        <button class="convert" onclick="convert()">Convert</button>
+        <div id="result" role="status" aria-live="polite"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
